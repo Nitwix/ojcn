@@ -1,0 +1,186 @@
+/*BODY STYLING*/
+body{
+	background-color: #FFB74D;
+	color: #5D4037;
+}
+/*offsets the content so that it isn't hidden by the navbar*/
+.container{
+	margin-top: 100px;
+}
+
+/*NAVBAR STYLING*/
+
+.navbar-default{
+	border-color: #ff9800;
+	color: #fff;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #5D4037;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #5D4037;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #fff; /*BACKGROUND color for active*/
+	background-color: #FB8C00;
+}
+
+.navbar-default {
+	border-color: #ff9800;
+
+	margin-bottom: 0;
+	border-radius: 0;
+
+	background-color: #ff9800;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color: #fff;
+	text-decoration: none;
+	background-color: #fff;  /*change color of links in drop down here*/
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	text-decoration: none;
+	background-color: #ffcc80; /*Change rollover cell color here*/
+}
+
+
+.navbar-default .navbar-nav > li > a {
+	color: white; /*Change active text color here*/
+}
+
+/*navbar-toggle */
+
+.navbar-default .navbar-toggle {
+	border-color: #ff9800;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #FB8C00;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+
+/*TABS STYLING*/
+.nav-tabs{
+	background-color:#FFA726;
+	border: 1px solid #FFA726;
+}
+.tab-content{
+	background-color:#FFB74D;
+	padding:5px;
+	color: 
+}
+.nav-tabs > li > a{
+	border: medium none;
+	color: #fff;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	color: #5D4037;
+	cursor: default;
+	border: 1px solid #FFA726;
+	border-bottom-color: transparent;
+	background-color: #FF9800 !important;
+}
+
+/*CAROUSEL STYLING*/
+
+.carousel-inner > .item > img {
+	margin: 0 auto;
+}
+
+.carouselSizing img{
+	width: auto;
+	height: 400px;
+	max-height: 400px;
+}
+
+/*stopping the gradient effect*/
+.carousel-control.left {
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+	background-image:      -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+	background-image:         linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+
+	background-color: rgba(255,167,38,0.6);
+}
+
+.carousel-control.right {
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+	background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0) 0%, rgba(0, 0, 0, 0) 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+	background-image:         linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
+
+	background-color: rgba(255,167,38,0.6);
+}
+
+.carousel-indicators {
+	bottom: 55px;
+}
+
+/*VIDEO STYLING*/
+.video-container { 
+	position: relative; /* keeps the aspect ratio */ 
+	padding-bottom: 56.25%; /* fine tunes the video positioning */ 
+	padding-right: 50px; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed { position: absolute; top: 0; left: 0%; width: 100%; height: 100%; }
+
+.video-title{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+/* RESPONSIVE iFrame */
+
+.responsive-iframe-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+/*ALERT STYLING*/
+.alert .alert-succes, .alert .alert-warning{
+	margin-top:15px;
+}
+
+/*FOOTER STYLING*/
+footer{
+	margin-top: 30px;
+}
