@@ -1,0 +1,7 @@
+text color : #5D4037
+page background-color : #FFB74D
+
+navigation bar background-color : #ff9800
+navigation bar active page : #FB8C00
+
+nav-tabs background-color : #FFA726
