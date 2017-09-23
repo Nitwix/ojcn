@@ -23,7 +23,6 @@
 						<li>Une super équipe à votre disposition :
 							<p style="margin-left:10px;">
 								<b>Direction musicale</b> : Steve Muriset <br>
-								<b>Responsable administration et organisation</b> : Olivier Simon <br>
 								<b>Responsable partitions et encadrement répétitions</b> : Emma Durville
 							</p>
 						</li>
