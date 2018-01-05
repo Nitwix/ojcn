@@ -29,7 +29,7 @@ body{
 	color: #5D4037;  /*Sets the text hover color on navbar*/
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
 a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #fff; /*BACKGROUND color for active*/
 	background-color: #FB8C00;
@@ -77,6 +77,46 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	background-color: #fff;
 }
 
+/*TO CHANGE THE WIDTH AT WHICH THE NAVBAR COLLAPSES*/
+/*To change it, just tweak the @media (max-width: ....px)*/
+@media (max-width: 950px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
 
 /*TABS STYLING*/
 .nav-tabs{
@@ -86,7 +126,7 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 .tab-content{
 	background-color:#FFB74D;
 	padding:5px;
-	color: 
+	color:
 }
 .nav-tabs > li > a{
 	border: medium none;
@@ -141,9 +181,9 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 }
 
 /*VIDEO STYLING*/
-.video-container { 
-	position: relative; /* keeps the aspect ratio */ 
-	padding-bottom: 56.25%; /* fine tunes the video positioning */ 
+.video-container {
+	position: relative; /* keeps the aspect ratio */
+	padding-bottom: 56.25%; /* fine tunes the video positioning */
 	padding-right: 50px; overflow: hidden;
 }
 
@@ -185,4 +225,3 @@ height: 100%;
 footer{
 	margin-top: 30px;
 }
-
