@@ -4,9 +4,9 @@
 	<body>
 		<?php include "includes/navbar.php"?>
 
-		<div class="container text-center">    
+		<div class="container text-center">
 			<div class="row">
-				<div class="col-sm-12 text-justify"> 
+				<div class="col-sm-12 text-justify">
 					<h1>Orchestre des Jeunes du Conservatoire de musique Neuchâtelois</h1>
 					<p>Bienvenue sur le site de l'orchestre des jeunes du conservatoire de musique neuchâtelois !</p>
 					<p>L'orchestre des Jeunes du Conservatoire, c'est...</p>
