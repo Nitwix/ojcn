@@ -8,13 +8,18 @@
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
 					<h1>Prochaines manifestations de l'OJCN</h1>
-					<p>Orchestre 1</p>
+					<h4>Orchestre 1 <small>(OJCN 1)</small></h4>
 					<ul>
-						<li>Pas encore de concerts annoncés</li>
+						<li><b>« Classique, Rock et compagnie »</b> Dimanche 25 mars, 17h00, <i>salle Perrier, Marin</i></li>
+						<li><b>OJCN 1 + chorales de l’EORN</b> Mardi 19 juin, 19h00, <i>Temple du Bas, Neuchâtel</i></li>
 					</ul>
-					<p>Orchestre 2</p>
+					<h4>Orchestre 2 <small>(OJCN 2)</small></h4>
 					<ul>
-						<li><b>Les solistes de l'OJCN</b>, Dimanche 7 Janvier 2018 à 17h00, <i>Conservatoire, site de Neuchâtel, Auditorium 1, Espace de l'Europe 21</i></li>
+						<li><b>« 5e symphonie de Beethoven » en première partie de l’EIN</b>, Dimanche 6 mai, 17h00, <i>Temple du Bas, Neuchâtel</i></li>
+					</ul>
+					<h4>Camp d'été</h4>
+					<ul>
+						<li><b>« Concert de la fin du camp »</b> Samedi 11 août, 19h00, <i>Auditorium 1 - CMNE</i></li>
 					</ul>
 					<h3><a href="https://www.facebook.com/OJCN-Orchestre-des-Jeunes-du-Conservatoire-de-musique-Neuch%C3%A2telois-158607718098417" target='_blank'>
 						Likez notre page Facebook pour être au courant des actualités de l'orchestre.</a></h3>
