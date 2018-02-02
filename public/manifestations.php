@@ -8,6 +8,12 @@
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
 					<h1>Prochaines manifestations de l'OJCN</h1>
+					<h4>Échange avec l’Orchestre des Jeunes de Haute-Bretagne <small>(OJHB)</small> <span class='glyphicon glyphicon-exclamation-sign'></h4>
+					<ul>
+						<li><a href="../documents/circulaire.pdf" target="_blank">Description du projet et circulaire</a></li>
+						<li><a href="../documents/description_OJHB.pdf" target="_blank">Présentation de l'OJHB</a></li>
+						<li><a href="http://ojhb.fr/" target="_blank">Lien vers le site de l'OJHB</a></li>
+					</ul>
 					<h4>Orchestre 1 <small>(OJCN 1)</small></h4>
 					<ul>
 						<li><b>« Classique, Rock et compagnie »</b> Dimanche 25 mars, 17h00, <i>salle Perrier, Marin</i></li>
@@ -32,8 +38,8 @@
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
 					<figure>
-						<img src="../images/orchestre_prochainesManifs.jpg" class="img-responsive">
-						<figcaption class="text-center">© Richard Leuenberger, L'Express, 17.01.13</figcaption>
+						<img src="../images/orchestre_prochainesManifs.jpeg" class="img-responsive img-rounded">
+						<figcaption class="text-center">L'orchestre 2 au spectacle des 100 ans du conservatoire</figcaption>
 					</figure>
 				</div>
 				<div class="col-md-2"></div>

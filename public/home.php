@@ -33,8 +33,8 @@
 				<div class="col-sm-2 col-lg-3 col-md-2"></div>
 				<div class="col-sm-8 col-lg-6 col-md-8">
 					<figure>
-						<img src="../images/orchestre_accueil.jpg" class="img-responsive">
-						<figcaption>© Ana Feric Moruzzi 2012</figcaption>
+						<img src="../images/orchestre_accueil.jpg" class="img-responsive img-rounded" >
+						<figcaption>L'orchestre 1</figcaption>
 					</figure>
 				</div>
 				<div class="col-sm-2 col-lg-3 col-md-2"></div>

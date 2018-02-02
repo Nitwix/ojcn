@@ -35,11 +35,11 @@ $active_page[$file_name] = 'active';
 
 $navbar .= "<ul class='nav navbar-nav'>";
 $navbar .= "<li class='".$active_page['home.php']."'><a href='home.php'>Accueil</a></li>";
-$navbar .= "<li class='".$active_page['manifestations.php']."'><a href='manifestations.php'>Prochaines manifestations</a></li>";
+$navbar .= "<li class='".$active_page['manifestations.php']."'><a href='manifestations.php'>Prochaines manifestations <span class='glyphicon glyphicon-exclamation-sign'></span></a></li>";
 $navbar .= "<li class='".$active_page['medias.php']."'><a href='medias.php'>Photos et vidéos</a></li>";
 $navbar .= "<li class='".$active_page['contact.php']."'><a href='contact.php'>Contact</a></li>";
-$navbar .= "<li><a href='http://www.cmne.ch/enseignement/inscription-ojcn/' target='_blank'>Inscriptions</a></li>";
-$navbar .= "<li><a href='http://www.cmne.ch' target='_blank'>CMNE</a></li>";
+$navbar .= "<li><a href='http://www.cmne.ch/enseignement/inscription-ojcn/' target='_blank'>Inscriptions <span class='glyphicon glyphicon-new-window'></span></a></li>";
+$navbar .= "<li><a href='http://www.cmne.ch' target='_blank'>CMNE <span class='glyphicon glyphicon-new-window'></span></a></li>";
 $navbar .= "</ul>";
 $navbar .= "<ul class='nav navbar-nav navbar-right'>";
 $navbar .= "<li class=''".$active_page['orch1']."''><a href='connexion.php?orchestre=1'><span class='glyphicon glyphicon-lock'></span> OJCN 1</a></li>";
