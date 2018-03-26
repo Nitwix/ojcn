@@ -21,7 +21,7 @@
 					</ul>
 					<h4>Orchestre 2 <small>(OJCN 2)</small></h4>
 					<ul>
-						<li><b>« 5e symphonie de Beethoven » en première partie de l’EIN</b>, Dimanche 6 mai, 17h00, <i>Temple du Bas, Neuchâtel</i></li>
+						<li><b>« 5e symphonie de Beethoven » en première partie de l’EIN</b>, Dimanche 6 mai, 16h00, <i>Temple du Bas, Neuchâtel</i></li>
 					</ul>
 					<h4>Camp d'été</h4>
 					<ul>
