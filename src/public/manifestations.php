@@ -30,10 +30,12 @@
 						Likez notre page Facebook pour être au courant des actualités de l'orchestre.</a></h3>
 				</div>
 				<div class="col-md-4">
-					<h3>Inscrivez-vous à la newsletter pour ne rater aucun concert!</h3>
+					<h3>Abonnez-vous à la newsletter pour ne rater aucun concert!</h3>
+					<p>Vous pouvez vous désabonner à tout moment via un lien contenu dans chaque mail.</p>
 					<form action="nl_sub.php" method="post">
-						<input type="email" name="email" id="email" placeholder="email@exemple.com">
+						<input type="email" name="email" placeholder="email@exemple.com">
 						<input type="submit" value="Inscrivez-vous" style="margin-bottom: 20px">
+						<input type="hidden" value="verify_msg" name="purpose">
 					</form>
 				</div>
 			</div>
