@@ -3,6 +3,7 @@ body{
 	background-color: #FFB74D;
 	color: #5D4037;
 }
+
 /*offsets the content so that it isn't hidden by the navbar*/
 .container{
 	margin-top: 100px;
