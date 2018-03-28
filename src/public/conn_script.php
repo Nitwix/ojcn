@@ -2,7 +2,7 @@
 //start the session
 session_start();
 
-require '../includes/db_connect.php';
+require '../sensible/db_connect.php';
 
 $user_pwd = htmlspecialchars($_POST['password']);
 $orchestre = htmlspecialchars($_POST['orchestre']);

@@ -5,7 +5,7 @@
 		<?php include "includes/navbar.php"?>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-8">
 					<h1>Prochaines manifestations de l'OJCN</h1>
 					<h4>Échange avec l’Orchestre des Jeunes de Haute-Bretagne <small>(OJHB)</small> <span class='glyphicon glyphicon-exclamation-sign'></h4>
 					<ul>
@@ -30,14 +30,17 @@
 						Likez notre page Facebook pour être au courant des actualités de l'orchestre.</a></h3>
 				</div>
 				<div class="col-md-4">
-					<h2>Inscrivez-vous à la newsletter!</h2>
-					<input type="email" name="email" id="email">
+					<h3>Inscrivez-vous à la newsletter pour ne rater aucun concert!</h3>
+					<form action="nl_sub.php" method="post">
+						<input type="email" name="email" id="email" placeholder="email@exemple.com">
+						<input type="submit" value="Inscrivez-vous" style="margin-bottom: 20px">
+					</form>
 				</div>
 			</div>
 
 
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-8">
 					<figure>
 						<img src="../images/orchestre_prochainesManifs.jpeg" class="img-responsive img-rounded">
 						<figcaption class="text-center">L'orchestre 2 au spectacle des 100 ans du conservatoire</figcaption>
