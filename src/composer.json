@@ -1,0 +1,13 @@
+{
+    "name": "niels/src",
+    "type": "project",
+    "require": {
+        "maximebf/debugbar": "^1.15"
+    },
+    "authors": [
+        {
+            "name": "Niels Lachat",
+            "email": "nielsnfsmw@gmail.com"
+        }
+    ]
+}

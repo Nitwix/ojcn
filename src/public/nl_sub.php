@@ -1,6 +1,21 @@
 <!DOCTYPE html>
+<?php
+		require "../vendor/autoload.php";
+		use DebugBar\StandardDebugBar;
+
+		$debugbar = new StandardDebugBar();
+		$debugbarRenderer = $debugbar->getJavascriptRenderer();
+
+		$debugbar["messages"]->addMessage("hello world!");
+?>
 <html lang="en">
 	<?php include "../includes/head.php"?>
+	
+	<?php
+		$debugbarRenderer->setBaseUrl('../vendor/maximebf/debugbar/src/DebugBar/Resources');
+		echo $debugbarRenderer->renderHead();
+	?>
+
 	<body>
 		<?php include "includes/navbar.php"?>
 
@@ -8,7 +23,9 @@
 			$purpose = htmlspecialchars($_POST["purpose"]);
 			$email = htmlspecialchars($_POST["email"]);
 			
-			//require "../sensible/db_connect.php";
+			require "../sensible/db_connect.php";
+			// $db_emails = mysql_query("select email from newsletter where id=1");
+			// $debugbar["messages"]->addMessage($db_emails);
 			//se connecter à la db pour voir si l'email n'existe pas déjà
 
 			//si l'email n'existe pas, envoyer un mail de confirmation et ajouter à la db
@@ -57,6 +74,8 @@
 		</div>
 
 		<?php include "../includes/footer.php"?>
+		
+		<?php echo $debugbarRenderer->render() ?>
 	</body>
 </html>
 
