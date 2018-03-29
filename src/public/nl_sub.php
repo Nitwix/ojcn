@@ -24,8 +24,12 @@
 			$email = htmlspecialchars($_POST["email"]);
 			
 			require "../sensible/db_connect.php";
-			// $db_emails = mysql_query("select email from newsletter where id=1");
-			// $debugbar["messages"]->addMessage($db_emails);
+			
+			$db_emails = mysqli_query($myDB, "SELECT email FROM newsletter WHERE id=1");
+			$arr = mysqli_fetch_array($db_emails);
+			$first_email = $arr["email"];
+
+			$debugbar["messages"]->addMessage($db_emails);
 			//se connecter à la db pour voir si l'email n'existe pas déjà
 
 			//si l'email n'existe pas, envoyer un mail de confirmation et ajouter à la db
@@ -67,6 +71,7 @@
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 					<?php
 						$contents->display();
+						echo $first_email;
 					?>
 				</div>
 				<div class="col-md-2 col-lg-2"></div>
