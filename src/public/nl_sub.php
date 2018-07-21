@@ -20,47 +20,47 @@
 		<?php include "includes/navbar.php"?>
 
 		<?php
-			$purpose = htmlspecialchars($_POST["purpose"]) || htmlspecialchars($_GET["purpose"]);
-			$email = htmlspecialchars($_POST["email"]);
+			$purpose = htmlspecialchars($_POST["purpose"]) /* || htmlspecialchars($_GET["purpose"]) */; //GET pour débugger
+			$email = htmlspecialchars($_POST["email"]) /* || htmlspecialchars($_GET["email"]) */;
+
+			//vérifie que l'email est donné dans un format correct
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+				$purpose = "invalid_email";
+			}
 			
 			//contenus de la page
 			require "newsletter/contents.php";
 			$contents = new Contents($purpose, $email);
 
-			require "../sensible/db_connect.php";
+			if(!$contents->invalid_email){
+				require "../sensible/db_connect.php";
 			
-			//regarder dans la db pour voir si l'email n'existe pas déjà
-			$query = "SELECT * FROM newsletter WHERE email='$email';"; 
-			$result = $myDB->query($query);
-			$db_email = $result->fetch_assoc()["email"];
+				//regarder dans la db pour voir si l'email n'existe pas déjà
+				$query = "SELECT * FROM newsletter WHERE email='$email';"; 
+				$result = $myDB->query($query);
+				$db_email = $result->fetch_assoc()["email"];
 
-			//si l'email n'existe pas, envoyer un mail de confirmation et ajouter à la db
-			//sinon, afficher que le mail existe déjà
-			if($db_email != null){
-				$debugbar["messages"]->addMessage("email already exists: $db_email");
-				$contents->title = "Cet email est déjà abonné à la newsletter";
-				$contents->subtitle = "Utilisez le lien présent dans un mail pour vous désabonner.";
-			}else{
-				$debugbar["messages"]->addMessage("email doesn't exits: $db_email");
+				//si le mail existe dans la bdd, signaler cela
+				//sinon: ajouter le mail dans la bdd et envoyer un mail pour confirmer
+				if($db_email != null){
+					$debugbar["messages"]->addMessage("email already exists: $db_email");
+					$contents->title = "Cet email est déjà abonné à la newsletter";
+					$contents->subtitle = "Utilisez le lien présent dans un mail pour vous désabonner.";
+				}else{
+					$debugbar["messages"]->addMessage("email doesn't exits: $db_email");
 
-				//pour ne pas avoir deux fois le même token (bien que grandement improbable)
-				$token_taken = false;
-				do{
 					$token = bin2hex(random_bytes(16));
-					$query = "SELECT * FROM newsletter WHERE token='$token';"; 
-					$result = $myDB->query($query);
-					$db_token = $result->fetch_assoc()["token"];
-					if($db_token == null){
-						$token_taken = false;
-					}
-				}while($token_taken);
+					
+					//ajout de l'email dans la db (verified est encore à 0 = false)
+					$query = "INSERT INTO newsletter (email, token) VALUES('$email', '$token');";
+					$insert = $myDB->query($query);
+					$debugbar["messages"]->addMessage($query);
 
-				//ajout de l'email dans la db (verified est encore à 0 = false)
-				$query = "INSERT INTO newsletter (email, token) VALUES('$email', '$token');";
-				$insert = $myDB->query($query);
-				$debugbar["messages"]->addMessage($query);
+					//envoyer le mail pour confirmer
+					//RESTART TO WORK HERE!!!
+					
+				}
 			}
-
 		?>
 
 		<div class="container">
