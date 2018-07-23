@@ -8,7 +8,6 @@ class Contents{
 
 	function __construct($purpose, $email){
 		$this->email = $email;
-		$this->invalid_email = false;
 
 		switch($purpose){
 			case "verify_msg":
@@ -22,8 +21,6 @@ class Contents{
 			case "invalid_email":
 				$this->title = "L'adresse que vous avez entré n'est pas valide.";
 				$this->subtitle = "Est-ce que \"$this->email\" est correct?";
-
-				$this->invalid_email = true;
 				break;
 			default:
 				echo "<div class='container' style='font-size:50px'>Error: Purpose not found...</div>";

@@ -20,19 +20,29 @@
 		<?php include "includes/navbar.php"?>
 
 		<?php
+			//DEBUGGING FUNCTION
+			function console_log($message){
+				echo "<script>";
+				echo "console.log(\"$message\")";
+				echo "</script>";
+			}
+
+
 			$purpose = htmlspecialchars($_POST["purpose"]) /* || htmlspecialchars($_GET["purpose"]) */; //GET pour débugger
 			$email = htmlspecialchars($_POST["email"]) /* || htmlspecialchars($_GET["email"]) */;
+			$invalid_email = false; //booleen 'true' si l'email est invalid
 
 			//vérifie que l'email est donné dans un format correct
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 				$purpose = "invalid_email";
+				$invalid_email = true;
 			}
 			
 			//contenus de la page
 			require "newsletter/contents.php";
 			$contents = new Contents($purpose, $email);
 
-			if(!$contents->invalid_email){
+			if(!$invalid_email){
 				require "../sensible/db_connect.php";
 			
 				//regarder dans la db pour voir si l'email n'existe pas déjà
@@ -50,13 +60,23 @@
 					$debugbar["messages"]->addMessage("email doesn't exits: $db_email");
 
 					$token = bin2hex(random_bytes(16));
-					
+					console_log($token);
+
 					//ajout de l'email dans la db (verified est encore à 0 = false)
 					$query = "INSERT INTO newsletter (email, token) VALUES('$email', '$token');";
 					$insert = $myDB->query($query);
 					$debugbar["messages"]->addMessage($query);
 
 					//envoyer le mail pour confirmer
+					$to = "nielsnfsmw@gmail.com"; //should be $email
+					$subject = "test de la newsletter ojcn.ch";
+					$message = "Ceci est un message";
+					$headers = "From: newsletter@ojcn.ch" . "\r\n";
+					if(mail($to, $subject, $message, $headers)){
+						console_log("Message succesfully sent");
+					}else{
+						console_log("Message not sent");
+					}
 					//RESTART TO WORK HERE!!!
 					
 				}
