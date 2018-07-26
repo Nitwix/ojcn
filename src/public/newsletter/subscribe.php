@@ -11,7 +11,7 @@ if($db_email != null){
     //ajout de l'email dans la db (verified est encore à 0 = false)
     $query = "INSERT INTO newsletter (email, token) VALUES('$email', '$token');";
     $insert = $myDB->query($query);
-    var_dump("insert query:", $insert);
+    //var_dump("insert query:", $insert);
     
     //envoyer le mail pour confirmer
     $to = "nielsnfsmw@gmail.com"; //should be $email
@@ -19,7 +19,7 @@ if($db_email != null){
     $message = "
     <h1>Merci de votre intérêt pour l'OJCN!</h1><br>
     <p>Veuillez cliquer sur le lien suivant pour confirmer votre abonnement:<br>
-    <a href=http://ojcn.ch/testing_branches/newsletter/public/newsletter.php?email=$email&purpose=confirm>Confirmez!</a>
+    <a href=http://www.ojcn.ch/testing_branches/newsletter/public/newsletter.php?email=$email&token=$token&purpose=confirm target=\"_blank\">Confirmez!</a>
     "; //changer le lien de testing_branches à newsletter.php etc...
     $headers = "From: Newsletter de l'OJCN <newsletter@ojcn.ch>\r\n";
     $headers .= "Return-Path: nielsnfsmw@gmail.com\r\n"; //si erreur dans l'envoi du mail
@@ -29,7 +29,9 @@ if($db_email != null){
     }else{
         console_log("- Mail de demande de confirmation non envoyé");
     }
-    echo $message;
+
+    unset($token); //so that it doesn't escape in places we don't want it to be ;)
+    //echo $message;
 }
 
 ?>

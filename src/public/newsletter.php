@@ -32,8 +32,9 @@
 				//regarder dans la db pour voir si l'email n'existe pas déjà
 				$query = "SELECT * FROM newsletter WHERE email='$email';"; 
 				$result = $myDB->query($query);
-				$db_email = $result->fetch_assoc()["email"];
-				var_dump("db_email", $db_email);
+				$db_line = $result->fetch_assoc();
+				$db_email = $db_line["email"];
+				//var_dump("db_email", $db_email);
 
 				$purpose = htmlspecialchars($_GET["purpose"]);
 				switch($purpose){
