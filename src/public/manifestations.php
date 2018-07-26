@@ -32,10 +32,10 @@
 				<div class="col-md-4">
 					<h3>Abonnez-vous à la newsletter pour ne rater aucun concert!</h3>
 					<p>Vous pouvez vous désabonner à tout moment via un lien contenu dans chaque mail.</p>
-					<form action="nl_sub.php" method="post">
+					<form action="newsletter.php" method="get">
 						<input type="email" name="email" placeholder="email@exemple.com" class="form-control">
 						<input type="submit" value="Abonnez-vous" style="margin-top: 10px; margin-bottom:20px;" class="btn btn-default pull-right">
-						<input type="hidden" value="verify_msg" name="purpose">
+						<input type="hidden" name="purpose" value="subscribe">
 					</form>
 				</div>
 			</div>
