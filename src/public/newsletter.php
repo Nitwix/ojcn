@@ -37,6 +37,7 @@
 				//var_dump("db_email", $db_email);
 
 				$purpose = htmlspecialchars($_GET["purpose"]);
+				$token = htmlspecialchars($_GET["token"]);
 				switch($purpose){
 					case "subscribe":
 						require "newsletter/subscribe.php";

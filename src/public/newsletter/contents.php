@@ -29,7 +29,7 @@ class Contents{
 
 	public function set_email_not_in_db(){
 		$this->title = "Email introuvable.";
-		$this->subtitle = "Veuillez vous inscrire avant de confirmer votre inscription.";
+		$this->subtitle = "Peut-être êtes-vous déjà désinscrit?.";
 	}
 
 	public function set_subscribed(){
@@ -43,8 +43,13 @@ class Contents{
 	}
 
 	public function set_token_mismatch(){
-		$this->title = "Le jeton fourni ne correspond pas à votre email";
-		$this->subtitle = "Veuillez essayer de reconfirmer votre abonnement";
+		$this->title = "Le jeton fourni ne correspond pas à votre email.";
+		$this->subtitle = "Veuillez réessayer ce que vous avez fait.";
+	}
+
+	public function set_unsubscribed(){
+		$this->title = "Désabonnement réussi avec succès.";
+		$this->subtitle = "Vous ne recevrez plus de mail de la newsletter de l'OJCN";
 	}
 
 	public function display(){
