@@ -14,7 +14,7 @@ if($db_email != null){
     //var_dump("insert query:", $insert);
     
     //envoyer le mail pour confirmer
-    $to = "nielsnfsmw@gmail.com"; //should be $email
+    $to = $email; //should be $email
     $subject = "Confirmez votre abonnement à la newsletter de l'OJCN";
     $message = "
     <h1>Merci de votre intérêt pour l'OJCN!</h1><br>
