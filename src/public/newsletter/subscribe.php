@@ -29,7 +29,7 @@ if($db_email != null){
     }else{
         console_log("- Mail de demande de confirmation non envoyé");
     }
-
+    echo $message;
 }
 
 ?>
