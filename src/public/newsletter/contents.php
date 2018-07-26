@@ -7,24 +7,24 @@ class Contents{
 
 
 	function __construct($purpose, $email){
-		$this->email = $email;
+		$this->title = "Default title";
+		$this->subtitle = "Default subtitle";
+		$this->email = "default@default.default";
+	}
 
-		switch($purpose){
-			case "verify_msg":
-				$this->title = "Veuillez confirmer votre email.";
-				$this->subtitle = "Un e-mail de confirmation vous a été envoyé à l'adresse suivante: $this->email";
-				break;
-			case "verified":
-				$this->title = "Votre e-mail a bien été vérifié";
-				$this->subtitle = "Vous recevrez désormais la newsletter de l'OJCN!";
-				break;
-			case "invalid_email":
-				$this->title = "L'adresse que vous avez entré n'est pas valide.";
-				$this->subtitle = "Est-ce que \"$this->email\" est correct?";
-				break;
-			default:
-				echo "<div class='container' style='font-size:50px'>Error: Purpose not found...</div>";
-		}
+	public function set_invalid_email(){
+		$this->title = "L'adresse que vous avez entré n'est pas valide.";
+		$this->subtitle = "Est-ce que \"$this->email\" est correct?";
+	}
+
+	public function set_already_subscribed(){
+		$this->title = "Cet email ($this->email) est déjà abonné à la newsletter";
+    	$this->subtitle = "Utilisez le lien présent dans un mail pour vous désabonner.";
+	}
+
+	public function set_please_verify(){
+		$this->title = "Veuillez confirmer votre email.";
+		$this->subtitle = "Un e-mail de confirmation vous a été envoyé à l'adresse suivante: $this->email";
 	}
 
 	public function display(){
