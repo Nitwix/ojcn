@@ -9,7 +9,7 @@ $navbar =  "<nav class='navbar navbar-default navbar-fixed-top'>
 					</button>
 					<a class='navbar-brand' href='http://ojcn.ch'>OJCN $get_orchestre</a>
 				</div>
-				<div class='collapse navbar-collapse' id='myNavbar'>"; //in the future, change http://new.ojcn.ch to http://ojcn.ch
+				<div class='collapse navbar-collapse' id='myNavbar'>"; 
 
 
 $file_name = basename($_SERVER['PHP_SELF']);

@@ -1,0 +1,12 @@
+<IfDefine development>
+    AuthType Basic
+    AuthName "Partie admin de l'ojcn - dev"
+    AuthUserFile /var/www/html/ojcn.ch/src/sensible/.htpasswd
+    Require valid-user
+</IfDefine>
+<IfDefine !development>
+    AuthType Basic
+    AuthName "Partie admin de l'ojcn"
+    AuthUserFile /var/www/html/ojcn.ch/src/sensible/.htpasswd
+    Require valid-user
+</IfDefine>
