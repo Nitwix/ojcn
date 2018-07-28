@@ -16,7 +16,30 @@
 
 		<!-- Create the editor container -->
 		
-		<div id="editor"></div>
+		
+		<div class="container">
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+				<div id="editor">
+					<?php 
+						//charge les données précédemment sauvegardées
+						echo file_get_contents("contents/$page.html"); 
+					?>
+				</div>
+
+				<?php
+					if($page != "newsletter"){
+						echo "<button onclick=\"saveHTML('$page')\" type='button' class='btn btn-default' style='margin-top:15px'>Sauvegarder les modifications</button>";
+					}else{
+						echo "<button onclick=\"sendNewsletter()\" type='button' class='btn btn-default' style='margin-top:15px'>Envoyer la newsletter</button>";
+					}
+				?>
+				
+
+			</div>
+		</div>
+		
+
+		
 		
 
 		<!-- Include the Quill library -->

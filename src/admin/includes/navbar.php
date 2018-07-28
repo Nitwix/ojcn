@@ -1,6 +1,5 @@
 <?php
 $navbar = "
-	<nav class='navbar navbar-default'></nav>
 	<nav class='navbar navbar-default navbar-fixed-top'>
 	<div class='container-fluid'>
 		<div class='navbar-header'>
