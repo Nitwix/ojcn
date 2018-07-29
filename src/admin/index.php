@@ -18,23 +18,32 @@
 		
 		
 		<div class="container">
-			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-				<div id="editor">
-					<?php 
-						//charge les données précédemment sauvegardées
-						echo file_get_contents("contents/$page.html"); 
+			<div class="col-md-12">
+				<div class="row">
+					<?php
+						if($page === "newsletter"){
+							require "../sensible/db_connect.php";
+							$result = $myDB->query("SELECT count(*) FROM newsletter WHERE verified=1");
+							$n_subscribers = $result->fetch_row()[0];
+							echo "<h3>La newsletter sera envoyée aux $n_subscribers abonnés.</h3>";
+						}
+					?>
+					<div id="editor">
+						<?php 
+							//charge les données précédemment sauvegardées
+							echo file_get_contents("contents/$page.html"); 
+						?>
+					</div>
+
+					<?php
+						//Bouton sauvegarder/envoyer
+						if($page != "newsletter"){
+							echo "<button onclick=\"saveHTML('$page')\" type='button' class='btn btn-default' style='margin-top:15px'>Sauvegarder les modifications</button>";
+						}else{
+							echo "<button onclick=\"sendNewsletter()\" type='button' class='btn btn-default' style='margin-top:15px'>Envoyer la newsletter</button>";
+						}
 					?>
 				</div>
-
-				<?php
-					if($page != "newsletter"){
-						echo "<button onclick=\"saveHTML('$page')\" type='button' class='btn btn-default' style='margin-top:15px'>Sauvegarder les modifications</button>";
-					}else{
-						echo "<button onclick=\"sendNewsletter()\" type='button' class='btn btn-default' style='margin-top:15px'>Envoyer la newsletter</button>";
-					}
-				?>
-				
-
 			</div>
 		</div>
 		
