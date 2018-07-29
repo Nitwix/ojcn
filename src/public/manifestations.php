@@ -8,7 +8,7 @@
 				<div class="col-md-8">
 					<h1>Prochaines manifestations de l'OJCN</h1>
 					
-					<h4>Échange avec l’Orchestre des Jeunes de Haute-Bretagne <small>(OJHB)</small> <span class='glyphicon glyphicon-exclamation-sign'></h4>
+					<!-- <h4>Échange avec l’Orchestre des Jeunes de Haute-Bretagne <small>(OJHB)</small> <span class='glyphicon glyphicon-exclamation-sign'></h4>
 					<ul>
 						<li><a href="../documents/circulaire.pdf" target="_blank">Description du projet et circulaire</a></li>
 						<li><a href="../documents/description_OJHB.pdf" target="_blank">Présentation de l'OJHB</a></li>
@@ -25,7 +25,9 @@
 					<h4>Camp d'été</h4>
 					<ul>
 						<li><b>« Concert de la fin du camp »</b> Samedi 11 août, 19h00, <i>Auditorium 1 - CMNE</i></li>
-					</ul>
+					</ul> -->
+
+					<?php echo file_get_contents("../admin/contents/manifestations.html"); ?>
 
 					<h3><a href="https://www.facebook.com/OJCN-Orchestre-des-Jeunes-du-Conservatoire-de-musique-Neuch%C3%A2telois-158607718098417" target='_blank'>
 						Likez notre page Facebook pour être au courant des actualités de l'orchestre.</a></h3>
