@@ -1,7 +1,7 @@
 <?php
 	//si la page n'est pas précisée, renvoyer à manifestations
 	if(!isset($_GET["page"])){
-		header("Location: index.php?page=manifestations");
+		header("Location: index.php?page=accueil");
 	}
 ?>
 
