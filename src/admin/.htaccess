@@ -7,6 +7,6 @@
 <IfDefine !development>
     AuthType Basic
     AuthName "Partie admin de l'ojcn"
-    AuthUserFile /var/www/html/ojcn.ch/src/sensible/.htpasswd
+    AuthUserFile /home/user150001/domains/ojcn.ch/public_html/testing_branches/newsletter/sensible/.htpasswd
     Require valid-user
 </IfDefine>
