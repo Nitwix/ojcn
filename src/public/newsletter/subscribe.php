@@ -18,7 +18,7 @@ if($db_email != null){
     $subject = "Confirmez votre abonnement à la newsletter de l'OJCN";
     $message = "
     <h1>Merci de votre intérêt pour l'OJCN!</h1><br>
-    <p>Veuillez cliquer sur le lien suivant pour confirmer votre abonnement:<br>
+    <p>Veuillez cliquer sur le lien suivant pour confirmer votre abonnement:</p><br>
     <a href=http://www.ojcn.ch/testing_branches/newsletter/public/newsletter.php?email=$email&token=$token&purpose=confirm target=\"_blank\">Confirmez!</a>
     "; //changer le lien de testing_branches à newsletter.php etc...
     $headers = "From: Newsletter de l'OJCN <newsletter@ojcn.ch>\r\n";
