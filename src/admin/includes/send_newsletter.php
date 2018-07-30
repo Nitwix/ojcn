@@ -9,6 +9,7 @@ $rows = $result->fetch_all();
 $date = date("d").".".date("m").".".date("Y");
 $subject = "Newsletter du $date";
 $quill_html = $_POST["quill_html"];
+echo $quill_html."\n\n\n";
 
 $headers = "From: Newsletter de l'OJCN <newsletter@ojcn.ch>\r\n";
 $headers .= "Return-Path: ojcn.officiel@gmail.com\r\n"; //si erreur dans l'envoi du mail
@@ -27,13 +28,13 @@ foreach ($rows as $row) {
     <a href=http://www.ojcn.ch/testing_branches/newsletter/public/newsletter.php?email=$email&token=$token&purpose=unsubscribe target=\"_blank\">
     Se désabonner de la newsletter</a>";//changer le lien de testing_branches à newsletter.php etc...
 
-    echo $message."\n";
-
     if(mail($email, $subject, $message, $headers)){
         echo "La newsletter s'est correctement envoyé à $email!\n\n";
     }else{
         echo "La newsletter ne s'est pas envoyé à $email\n\n";
     }
 }
+
+
 
 ?>

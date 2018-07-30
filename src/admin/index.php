@@ -41,6 +41,11 @@
 							echo "<button onclick=\"saveHTML('$page')\" type='button' class='btn btn-default' style='margin-top:15px'>Sauvegarder les modifications</button>";
 						}else{
 							echo "<button onclick=\"sendNewsletter()\" type='button' class='btn btn-default' style='margin-top:15px'>Envoyer la newsletter</button>";
+							echo "
+								<p>Pour voir si les mails se sont envoyés, veuillez ouvrir la console du navigateur. 
+									<a href=https://webmasters.stackexchange.com/questions/8525/how-do-i-open-the-javascript-console-in-different-browsers target=\"_blank\">Comment faire?</a>
+								</p>
+							";
 						}
 					?>
 				</div>

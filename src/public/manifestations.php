@@ -27,7 +27,10 @@
 						<li><b>« Concert de la fin du camp »</b> Samedi 11 août, 19h00, <i>Auditorium 1 - CMNE</i></li>
 					</ul> -->
 
-					<?php echo file_get_contents("../admin/contents/manifestations.html"); ?>
+					<?php 
+						echo file_get_contents("../admin/contents/manifestations.html");
+						echo "Dernière modification le ".file_get_contents("../admin/contents/manifestations_modif_date.txt");
+					?>
 
 					<h3><a href="https://www.facebook.com/OJCN-Orchestre-des-Jeunes-du-Conservatoire-de-musique-Neuch%C3%A2telois-158607718098417" target='_blank'>
 						Likez notre page Facebook pour être au courant des actualités de l'orchestre.</a></h3>

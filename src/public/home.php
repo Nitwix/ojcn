@@ -7,7 +7,7 @@
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-sm-12 text-justify">
-					<h1>Orchestre des Jeunes du Conservatoire de musique Neuchâtelois</h1>
+					<!-- <h1>Orchestre des Jeunes du Conservatoire de musique Neuchâtelois</h1>
 					<p>Bienvenue sur le site de l'orchestre des jeunes du conservatoire de musique neuchâtelois !</p>
 					<p>L'orchestre des Jeunes du Conservatoire, c'est...</p>
 					<ul>
@@ -26,7 +26,10 @@
 								<b>Responsable partitions et encadrement répétitions</b> : Emma Durville
 							</p>
 						</li>
-					</ul>
+					</ul> -->
+					<?php 
+						echo file_get_contents("../admin/contents/accueil.html");
+					?>
 				</div>
 			</div>
 			<div class="row">

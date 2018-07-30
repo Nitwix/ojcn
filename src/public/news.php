@@ -6,7 +6,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-                    <?php echo file_get_contents("../admin/contents/news.html"); ?>
+                    <?php 
+						echo file_get_contents("../admin/contents/news.html");
+						echo "Dernière modification le ".file_get_contents("../admin/contents/news_modif_date.txt");
+					?>
                 </div>
 			</div>
 		</div>
