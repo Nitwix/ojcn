@@ -64,38 +64,46 @@
 		<?php include "../includes/footer.php"?>
 
 		<script> //THIS SCRIPT PUTS THE IMAGES IN THE IMAGE SLIDER (CAROUSEL)
-			var imgsMeta = [makeMeta("Fête des vendanges, 27.09.2015"),
-							makeMeta("Kiosque à musique, 28.03.2015"),
-							makeMeta("Concert au temple du bas"),
-						    makeMeta("West Side Story - Violons"),
-						    makeMeta("West Side Story - Vents"),
-						    makeMeta("West Side Story - Cordes"),
-						    makeMeta("West Side Story - Harmonie"),
-						    makeMeta("West Side Story - Orchestre")]; //data of the pictures
-			function makeMeta(title){
-				var meta = {};
-				meta.name = "";
-				meta.title = title;
-				return meta;
-			}
-			var _images = [];
-			<?php $path = "../images/photos_public";
-	$images = array_diff(scandir($path), array('.', '..'));
-	foreach($images as $i){
-		echo "_images.push('../images/photos_public/$i');";
-	}
-			?>;
-			for (var i in _images){
-				if(imgsMeta[i] == undefined){
-					imgsMeta.push({name:"",title:""});
-				}
-				imgsMeta[i].name = _images[i];
-			}
+			// var imgsMeta = [makeMeta("Fête des vendanges, 27.09.2015"),
+			// 				makeMeta("Kiosque à musique, 28.03.2015"),
+			// 				makeMeta("Concert au temple du bas"),
+			// 			    makeMeta("West Side Story - Violons"),
+			// 			    makeMeta("West Side Story - Vents"),
+			// 			    makeMeta("West Side Story - Cordes"),
+			// 			    makeMeta("West Side Story - Harmonie"),
+			// 			    makeMeta("West Side Story - Orchestre")]; //data of the pictures
+			// function makeMeta(title){
+			// 	var meta = {};
+			// 	meta.name = "";
+			// 	meta.title = title;
+			// 	return meta;
+			// }
+			// var imgsMeta = [];
+			// var _images = [];
 
+			//array des urls (relatifs) des images
+			let imgsUrls = [];
+
+			//scan le dir 'photos_public' et insère les urls dans imgsUrls
+			<?php 
+				$path = "../images/photos_public";
+				$images = array_diff(scandir($path), array('.', '..'));
+				foreach($images as $i){
+					echo "imgsUrls.push('../images/photos_public/$i');";
+				}
+			?>;
+			// for (var i in _images){
+			// 	if(imgsMeta[i] == undefined){
+			// 		imgsMeta.push({name:"",title:""});
+			// 	}
+			// 	imgsMeta[i].name = _images[i];
+			// }
+
+			//crée et ajoute les images dans le carousel
 			$(document).ready(function(){
 				var $carIndic = $("#carouselIndicators");
 				var $carInner = $("#carouselInner");
-				for(i in imgsMeta){
+				for(i in imgsUrls){
 					if(i==0){
 						$carIndic.append($("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>"));
 
@@ -105,15 +113,16 @@
 
 						var $item = $("<div class='item carouselSizing'></div>");
 					}
-					var $img = $("<img class='carouselSizing' src='../images/"+imgsMeta[i].name+"'>");
+					var $img = $("<img class='carouselSizing' src='"+imgsUrls[i]+"'>");
+					// console.log(imgsUrls[i]);
 
-					var $caption = $("<b><div class='carousel-caption'></div></b>");//<b> to put the description out of the img
-					var $title = $("<h3>"+imgsMeta[i].title+"</h3>");
+					// var $caption = $("<b><div class='carousel-caption'></div></b>");//<b> to put the description out of the img
+					// var $title = $("<h3>"+imgsMeta[i].title+"</h3>");
 
-					$caption.append($title);
+					// $caption.append($title);
 
 					$item.append($img);
-					$item.append($caption);
+					// $item.append($caption);
 
 					$carInner.append($item);
 				}
